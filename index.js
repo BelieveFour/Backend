@@ -40,7 +40,7 @@ mySqlPool.query('SELECT 1').then(() => {
 
 app.get("/", async (req, res) => {
   try {
-    const [rows, fields] = await mySqlPool.query("SELECT * FROM Persons");
+    const [rows, fields] = await mySqlPool.query("SELECT * FROM chart");
     res.json({ persons: rows });
   } catch (error) {
     console.error('Error querying database:', error);
